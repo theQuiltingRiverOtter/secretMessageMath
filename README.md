@@ -26,9 +26,9 @@ Organization:
 
     Pick 26 random properties from object, store in a new object with alphabet as keys, should probably use object.values and check if value is in object before assigning to ensure no duplication
     {
-        a : {3x2 : 6},
-        b : {5x6 : 30},
-        c : {12/4 : 3},
+        a : {"6": ['1x6', "6x1", "3x2", "2x3"]},
+        b : {"30" : ["3x10", "10x3", "5x6", "6x5"]},
+        c : {"3" : ["12/4", "9/3", "33/11",...]},
         ...
     }
 
@@ -38,7 +38,7 @@ Organization:
     Display the entire alphabet object.
 
     To Dos:
-    JS: function to make legend needs a way to ensure the same value isn't added more than once. I tried this with a while loop and an array of used values, but it took to long for the code to complete. This might be fixed with more data in the multiplication and division objects. Another option could be using a set.
+    JS: function to make legend needs a way to ensure the same value isn't added more than once. I tried this with a while loop and an array of used values, but it took to long for the code to complete. This might be fixed with more data in the multiplication and division objects. Another option could be using a set. It could also probably be refactored with two extra functions, one to connect the answers and another to connect the problems.
 
     Finish multiplication and division objects, this is just a route task
 
