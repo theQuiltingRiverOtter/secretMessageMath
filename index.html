@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
     <title>Secret Message Math</title>
 </head>
 <body>
+    <h1>Secret Message Math</h1>
+    <form action="">
+        <label for="mathType">Math Type</label>
+        <div>
+            <input type="radio" id="multiplication" name="mathType" value="multiplication" checked />
+            <label for="huey">Multiplication</label>
+        </div>
+        
+        <div>
+            <input type="radio" id="division" name="mathType" value="division" />
+            <label for="division">Division</label>
+        </div>
+        <div>
+            <label for="secretMessage">Secret Message</label>
+            <textarea id="secretMessage" name="secretMessage" rows="10" cols="50"></textarea>
+        </div>
+        <button>Encode</button>
+
+    </form>
     
 </body>
 </html>
