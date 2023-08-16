@@ -36,5 +36,18 @@ Organization:
     For each letter in the secret message, return a blank space with the key on the letter object underneath it.
 
     Display the entire alphabet object.
+
+    To Dos:
+    JS: function to make legend needs a way to ensure the same value isn't added more than once. I tried this with a while loop and an array of used values, but it took to long for the code to complete. This might be fixed with more data in the multiplication and division objects. Another option could be using a set.
+
+    Finish multiplication and division objects, this is just a route task
+
+    Add DOM controls
+
+    Add function to convert secret message to items in legend.
+
+    CSS:  All styling
+
+    HTML: Add space for the returned secret message
     
     
