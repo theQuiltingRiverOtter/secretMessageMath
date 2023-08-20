@@ -18,13 +18,13 @@ Application returns
 
 Results should be formatted for printing so the secret message can be printed off for a child to solve
 
-Basic application should include the 1-12 times and division tables, could possibly expand to more math problems such as three-digit addition and subtraction, two-digit multiplication and division, fractions, etc.
+Basic application should include the 1-12 times and division tables, could possibly expand to more math problems such as three-digit addition and subtraction, two-digit multiplication and division, fractions, etc. with options for the user to select what type of problems to include.
 
 
 Organization:
-    Possibly use an object to store the tables, not sure whether to break up into multiple objects for each time/division table
+    Possibly use an object to store the tables, not sure whether to break up into multiple objects for each time/division table or just include them all in one. More advanced could use a factory function or class to create these allowing for more flexibility.
 
-    Pick 26 random properties from object, store in a new object with alphabet as keys, should probably use object.values and check if value is in object before assigning to ensure no duplication
+    Pick 26 random properties from the object, store in a new object with alphabet as keys, should probably use object.values and check if value is in object before assigning to ensure no duplication
     {
         a : {"6": ['1x6', "6x1", "3x2", "2x3"]},
         b : {"30" : ["3x10", "10x3", "5x6", "6x5"]},
@@ -40,7 +40,7 @@ Organization:
     To Dos:
     JS: function to make legend needs a way to ensure the same value isn't added more than once. I tried this with a while loop and an array of used values, but it took to long for the code to complete. This might be fixed with more data in the multiplication and division objects. Another option could be using a set. It could also probably be refactored with two extra functions, one to connect the answers and another to connect the problems.
 
-    Finish multiplication and division objects, this is just a route task
+    Finish multiplication and division objects, this could be a route task or could use functions to create dynamically.
 
     Add DOM controls
 
@@ -48,6 +48,6 @@ Organization:
 
     CSS:  All styling
 
-    HTML: Add space for the returned secret message
+    HTML: Add space for the returned secret message, add more form inputs to give user more flexibility (i.e. if they only want the 4,7,8,9 times tables, they could just select those)
     
     

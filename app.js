@@ -1,3 +1,5 @@
+
+//This object could be created dynamically with a function
 const multiplication = {
     "1x1" : 1,
     "1x2" : 2,
@@ -39,6 +41,7 @@ const multiplication = {
 
 }
 
+//This object could be created dynamically with a function
 const division = {
     "144/12" : 12,
     "132/12" : 11,
@@ -47,7 +50,8 @@ const division = {
 }
 
 
-
+//This function should loop through the alphabet and assign values 
+//and problems to each letter to create a legend for the message
 function makeLegend(mathType){
     const values = Object.values(mathType);
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
