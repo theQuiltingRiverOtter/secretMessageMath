@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    
     <title>Secret Message Math</title>
 </head>
 <body>
     <h1>Secret Message Math</h1>
-    <form action="">
+    <form id="encodeForm" >
         <label for="mathType">Math Type</label>
         <div>
             <input type="radio" id="multiplication" name="mathType" value="multiplication" checked />
@@ -24,9 +24,14 @@
             <label for="secretMessage">Secret Message</label>
             <textarea id="secretMessage" name="secretMessage" rows="10" cols="50"></textarea>
         </div>
-        <button>Encode</button>
+        <button id="encode">Encode</button>
 
     </form>
-    
+
+    <div>
+        <div id="mathMessage"></div>
+        <div id="legend"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
