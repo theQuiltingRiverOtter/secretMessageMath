@@ -83,25 +83,42 @@ function encodeMessage(message, legend){
         
         }
         
-        return encodedWord.join(", ");
+        return encodedWord;
     })
     
-    let encodedMessage = wordsProblems.join("   ||   ");
-    return encodedMessage;
+    console.log(wordsProblems)
+    return wordsProblems;
 }
 
 let encodeForm = document.querySelector("#encodeForm");
 let mathMessage = document.querySelector("#mathMessage");
 let docLegend = document.querySelector("#legend");
 
+
+function showMathMessage(message){
+    const m = document.createElement("div")
+    m.classList.add("message")
+    for (let word of message){
+        const w = document.createElement("div");
+        w.classList.add("word");
+        for (let problem of word){
+            const p = document.createElement("div");
+            p.classList.add("problem");
+            p.innerHTML = problem;
+            w.appendChild(p);
+        }
+        m.appendChild(w);
+    }
+    mathMessage.appendChild(m);
+}
+
 encodeForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let legend = makeLegend(allMultTables);
-    console.log(legend);
     let secretMessage = document.querySelector("#secretMessage").value;
     let encoded = encodeMessage(secretMessage, legend);
     document.querySelector("#secretMessage").value = '';
-    mathMessage.innerHTML = encoded;
+    showMathMessage(encoded);
     for (let item in legend){
         const value = Object.keys(legend[item]);
         const line = document.createElement("div");

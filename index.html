@@ -9,29 +9,38 @@
 </head>
 <body>
     <h1>Secret Message Math</h1>
-    <form id="encodeForm" >
-        <label for="mathType">Math Type</label>
-        <div>
-            <input type="radio" id="multiplication" name="mathType" value="multiplication" checked />
-            <label for="huey">Multiplication</label>
-        </div>
-        
-        <div>
-            <input type="radio" id="division" name="mathType" value="division" />
-            <label for="division">Division</label>
-        </div>
-        <div>
-            <label for="secretMessage">Secret Message</label>
-            <textarea id="secretMessage" name="secretMessage" rows="10" cols="50"></textarea>
-        </div>
-        <button id="encode">Encode</button>
-
-    </form>
 
     <div>
         <div id="mathMessage"></div>
         <div id="legend"></div>
     </div>
+
+    <button class="open-button" onclick="openForm()">Encode a New Message</button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container" id="encodeForm" >
+            <label for="mathType">Math Type</label>
+            <div>
+                <input type="radio" id="multiplication" name="mathType" value="multiplication" checked />
+                <label for="huey">Multiplication</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="division" name="mathType" value="division" />
+                <label for="division">Division</label>
+            </div>
+            <div>
+                <label for="secretMessage">Secret Message</label>
+                <textarea id="secretMessage" name="secretMessage" rows="10" cols="30"></textarea>
+            </div>
+            <button type="submit" class='btn' id="encode" onclick="closeForm()">Encode</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    
+    </div>
+   
+    
     <script src="app.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>
