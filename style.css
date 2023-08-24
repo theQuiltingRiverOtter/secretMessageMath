@@ -1,17 +1,39 @@
 * {
     box-sizing: border-box;
+    font-family: serif;
+    background-color: #EAF2E3;
 }
 
-#docLegend {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 50vh;
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50vw;
+    justify-items: center;
+    background-color: #61E8E1;
+    border-radius: 10px;
+    padding: 20px;
+}
+.line {
+  font-size: 18px;
+  background-color: #61E8E1;
+  color: #F25757;
 }
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-    background-color: #555;
+    background-color: #F25757;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -24,11 +46,12 @@
   }
   .message {
     font-size: 18px;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    margin: 20px;
+    margin: 80px;
   }
   .word {
     display: flex;
@@ -75,8 +98,8 @@
   
   /* Set a style for the submit/login button */
   .form-container .btn {
-    background-color: #04AA6D;
-    color: white;
+    background-color: #F2E863;
+    color: black;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -87,7 +110,7 @@
   
   /* Add a red background color to the cancel button */
   .form-container .cancel {
-    background-color: red;
+    background-color: #F25757;
   }
   
   /* Add some hover effects to buttons */

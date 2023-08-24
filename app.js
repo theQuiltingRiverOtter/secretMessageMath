@@ -96,6 +96,9 @@ let docLegend = document.querySelector("#legend");
 
 
 function showMathMessage(message){
+    while (mathMessage.firstChild){
+        mathMessage.removeChild(mathMessage.firstChild)
+    }
     const m = document.createElement("div")
     m.classList.add("message")
     for (let word of message){
@@ -114,6 +117,9 @@ function showMathMessage(message){
 
 encodeForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    while (docLegend.firstChild){
+        docLegend.removeChild(docLegend.firstChild);
+    }
     let legend = makeLegend(allMultTables);
     let secretMessage = document.querySelector("#secretMessage").value;
     let encoded = encodeMessage(secretMessage, legend);
@@ -122,7 +128,8 @@ encodeForm.addEventListener("submit", (e) => {
     for (let item in legend){
         const value = Object.keys(legend[item]);
         const line = document.createElement("div");
-        line.innerHTML = `${value} : ${item}`
+        line.classList.add('line');
+        line.innerHTML = `${item.toUpperCase()}   -    ${value}`
         docLegend.append(line);
     }
     
