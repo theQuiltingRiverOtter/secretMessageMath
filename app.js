@@ -99,20 +99,34 @@ function showMathMessage(message){
     while (mathMessage.firstChild){
         mathMessage.removeChild(mathMessage.firstChild)
     }
-    const m = document.createElement("div")
-    m.classList.add("message")
+    const messageForm = document.createElement("form")
+    messageForm.classList.add("messageForm")
     for (let word of message){
         const w = document.createElement("div");
         w.classList.add("word");
         for (let problem of word){
-            const p = document.createElement("div");
-            p.classList.add("problem");
-            p.innerHTML = problem;
-            w.appendChild(p);
+            const cell = document.createElement("div")
+            cell.classList.add('problem')
+            const input = document.createElement("input");
+            input.setAttribute('type', 'text');
+            input.classList.add('inputCell')
+            input.setAttribute('id', 'problem')
+            input.setAttribute('autocomplete', 'off')
+            const label = document.createElement("label");
+            label.classList.add('label')
+            label.setAttribute('for', 'problem')
+            label.innerHTML = problem
+            cell.appendChild(input);
+            cell.appendChild(label);
+            w.appendChild(cell);
         }
-        m.appendChild(w);
+        messageForm.appendChild(w);
     }
-    mathMessage.appendChild(m);
+    const newButton = document.createElement("button");
+    newButton.textContent = "Submit Message";
+    newButton.classList.add("submitBtn");
+    messageForm.appendChild(newButton);
+    mathMessage.appendChild(messageForm);
 }
 
 encodeForm.addEventListener("submit", (e) => {

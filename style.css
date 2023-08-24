@@ -31,6 +31,26 @@ h1 {
   color: #F25757;
 }
 
+.problem {
+  clear: both;
+  float: left;
+  text-align: center;
+}
+.label {
+  float: center;
+}
+.inputCell {
+  display: block;
+  width: 5ch;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue;
+}
+
+.inputCell:focus {
+  border-color: green;
+}
+
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
     background-color: #F25757;
@@ -44,14 +64,13 @@ h1 {
     right: 28px;
     width: 280px;
   }
-  .message {
+  .messageForm {
     font-size: 18px;
-    justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    margin: 80px;
+    margin: 40px;
   }
   .word {
     display: flex;
@@ -59,10 +78,7 @@ h1 {
     gap: 8px;
   }
 
-  .problem {
-    border-top: solid 1px black;
-  }
-  
+
 
 .form-popup {
     display: none;
@@ -107,7 +123,8 @@ h1 {
     margin-bottom:10px;
     opacity: 0.8;
   }
-  
+ 
+
   /* Add a red background color to the cancel button */
   .form-container .cancel {
     background-color: #F25757;
