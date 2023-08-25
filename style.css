@@ -107,7 +107,7 @@ h1 {
   }
   
   /* When the inputs get focus, do something */
-  .form-container textarea:focus, {
+  .form-container textarea:focus {
     background-color: #ddd;
     outline: none;
   }

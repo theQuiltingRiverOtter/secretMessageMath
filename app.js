@@ -125,6 +125,7 @@ function showMathMessage(message){
     const newButton = document.createElement("button");
     newButton.textContent = "Submit Message";
     newButton.classList.add("submitBtn");
+    newButton.setAttribute("id", "submitBtn")
     messageForm.appendChild(newButton);
     mathMessage.appendChild(messageForm);
 }
@@ -148,4 +149,3 @@ encodeForm.addEventListener("submit", (e) => {
     }
     
 })
-

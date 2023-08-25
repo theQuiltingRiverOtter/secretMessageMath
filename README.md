@@ -1,6 +1,10 @@
 # secretMessageMath
 An application to make a secret message that is solved using multiplication and division
 
+Live Site: https://thequiltingriverotter.github.io/secretMessageMath/
+
+*Note: when inputting the message, it will not accept punctuation or pressing the Enter key. The division encoding is still not hooked up. The submit message button doesn't do anything yet.
+
 This application asks the user for a string to encode. It will then convert each letter to a math problem, where the answer to the math problem correlates to the letter from the original string.
 
 Example: 
@@ -33,21 +37,22 @@ Organization:
     }
 
 
-    For each letter in the secret message, return a blank space with the key on the letter object underneath it.
+    For each letter in the secret message, return an input with the key on the label underneath it.
 
     Display the entire alphabet object.
 
     To Dos:
-    JS: function to make legend needs a way to ensure the same value isn't added more than once. I tried this with a while loop and an array of used values, but it took to long for the code to complete. This might be fixed with more data in the multiplication and division objects. Another option could be using a set. It could also probably be refactored with two extra functions, one to connect the answers and another to connect the problems.
+    Hook up radio buttons and add checkboxes to choose times tables
+    Fix validation so you can use punctuation or new lines in the secret message
+    Add message checking to see if the message typed in matches the original message
 
-    Finish multiplication and division objects, this could be a route task or could use functions to create dynamically.
+    CSS:  Styling
 
-    Add DOM controls
+    JS: Refactor longer functions
 
-    Add function to convert secret message to items in legend.
+    Expand Comments
 
-    CSS:  All styling
+    Fix print screen window to be centered on page and have space around it.
 
-    HTML: Add space for the returned secret message, add more form inputs to give user more flexibility (i.e. if they only want the 4,7,8,9 times tables, they could just select those)
     
     
